@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Code, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-developer.jpg";
+import { ABOUT } from "@/lib/constans";
 
 const Hero = () => {
   return (
@@ -8,10 +9,13 @@ const Hero = () => {
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(var(--primary))_0%,transparent_50%)] opacity-10"></div>
-      
+
       {/* Animated Background Shapes */}
       <div className="absolute top-20 left-10 w-32 h-32 border border-primary/20 rounded-full animate-float"></div>
-      <div className="absolute bottom-20 right-10 w-24 h-24 border border-accent/20 rounded-lg rotate-45 animate-float" style={{ animationDelay: "2s" }}></div>
+      <div
+        className="absolute bottom-20 right-10 w-24 h-24 border border-accent/20 rounded-lg rotate-45 animate-float"
+        style={{ animationDelay: "2s" }}
+      ></div>
       <div className="absolute top-1/2 left-20 w-16 h-16 bg-gradient-hero opacity-20 rounded-full animate-pulse"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -23,16 +27,17 @@ const Hero = () => {
                 <Sparkles className="w-5 h-5" />
                 <span className="text-sm font-medium">Hello, I'm</span>
               </div>
-              
+
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
                 <span className="gradient-text">Elliot C.</span>
                 <br />
                 Chavez Morales
               </h1>
-              
+
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Passionate web developer who loves to build beautiful apps. 
-                Strong attraction for aesthetics, performance, and UX.
+                Passionate web developer who loves to build beautiful,
+                performant, and functional apps. Strong attraction for
+                aesthetics, performance, and UX.
               </p>
             </div>
 
@@ -43,7 +48,7 @@ const Hero = () => {
                   Let's Build Together
                 </a>
               </Button>
-              
+
               <Button variant="glow" size="xl" asChild>
                 <a href="#about">
                   Learn More
@@ -55,22 +60,35 @@ const Hero = () => {
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border/50">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">7+</div>
-                <div className="text-sm text-muted-foreground">Years Experience</div>
+                <div className="text-2xl font-bold text-primary">
+                  {ABOUT.yearsOfExperience}+
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  Years Experience
+                </div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-accent">50+</div>
-                <div className="text-sm text-muted-foreground">Projects Built</div>
+                <div className="text-2xl font-bold text-accent">
+                  {ABOUT.projectsBuilt}+
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  Projects Built
+                </div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary">∞</div>
-                <div className="text-sm text-muted-foreground">Coffee Consumed</div>
+                <div className="text-sm text-muted-foreground">
+                  Passion for my craft
+                </div>
               </div>
             </div>
           </div>
 
           {/* Hero Image */}
-          <div className="relative animate-fade-in" style={{ animationDelay: "0.3s" }}>
+          <div
+            className="relative animate-fade-in"
+            style={{ animationDelay: "0.3s" }}
+          >
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-hero opacity-20 rounded-2xl blur-3xl animate-glow"></div>
               <img

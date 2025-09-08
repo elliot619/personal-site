@@ -1,45 +1,46 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Github, Linkedin, MessageCircle } from "lucide-react";
+import { CONTACT_INFO } from "@/lib/constans";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Github,
+  Linkedin,
+  MessageCircle,
+} from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
     {
       icon: Mail,
       label: "Email",
-      value: "chavez.elliot@gmail.com",
-      href: "mailto:chavez.elliot@gmail.com",
-      color: "text-primary"
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+1 548-384-15-91",
-      href: "tel:+15483841591",
-      color: "text-accent"
+      value: CONTACT_INFO.email,
+      href: `mailto:${CONTACT_INFO.email}`,
+      color: "text-primary",
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Kitchener, ON, Canada",
+      value: CONTACT_INFO.location,
       href: "#",
-      color: "text-primary"
-    }
+      color: "text-primary",
+    },
   ];
 
   const socialLinks = [
     {
       icon: Github,
       label: "GitHub",
-      href: "https://www.github.com/elliot619",
-      color: "text-foreground hover:text-primary"
+      href: CONTACT_INFO.github,
+      color: "text-foreground hover:text-primary",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/elliotch",
-      color: "text-foreground hover:text-accent"
-    }
+      href: CONTACT_INFO.linkedin,
+      color: "text-foreground hover:text-accent",
+    },
   ];
 
   return (
@@ -50,7 +51,8 @@ const Contact = () => {
             Let's <span className="gradient-text">Connect</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to build something amazing together? I'm always open to discussing new opportunities and exciting projects.
+            I'm always open to discussing new opportunities and exciting
+            projects.
           </p>
         </div>
 
@@ -73,7 +75,9 @@ const Contact = () => {
                   >
                     <contact.icon className={`w-5 h-5 ${contact.color}`} />
                     <div>
-                      <div className="text-sm text-muted-foreground">{contact.label}</div>
+                      <div className="text-sm text-muted-foreground">
+                        {contact.label}
+                      </div>
                       <div className="font-medium group-hover:text-primary transition-colors duration-200">
                         {contact.value}
                       </div>
@@ -113,25 +117,27 @@ const Contact = () => {
               <CardContent className="p-8 h-full flex flex-col justify-center">
                 <div className="space-y-6 text-center">
                   <div className="space-y-4">
-                    <h3 className="text-2xl lg:text-3xl font-bold">
-                      Ready to Start Your Next Project?
-                    </h3>
                     <p className="text-lg text-muted-foreground leading-relaxed">
-                      Whether you need a stunning frontend, robust backend, or complete full-stack solution, 
-                      I'm here to help bring your vision to life with clean code and beautiful design.
+                      Whether you need a stunning frontend, robust backend, or
+                      complete full-stack solution, I'd love to help bring your
+                      vision to life with clean code and beautiful design.
                     </p>
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button variant="hero" size="xl" asChild>
-                      <a href="mailto:chavez.elliot@gmail.com">
+                      <a href={`mailto:${CONTACT_INFO.email}`}>
                         <Mail className="w-5 h-5" />
                         Send Me an Email
                       </a>
                     </Button>
-                    
+
                     <Button variant="glow" size="xl" asChild>
-                      <a href="https://www.linkedin.com/in/elliotch" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={CONTACT_INFO.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Linkedin className="w-5 h-5" />
                         Connect on LinkedIn
                       </a>
@@ -140,8 +146,11 @@ const Contact = () => {
 
                   <div className="pt-6 border-t border-border/50">
                     <p className="text-muted-foreground">
-                      <span className="text-primary font-medium">Current Status:</span> 
-                      Available for new opportunities and interesting projects
+                      <span className="text-primary font-medium">
+                        Current Status:
+                      </span>
+                      &nbsp;Available for new opportunities and interesting
+                      projects
                     </p>
                   </div>
                 </div>

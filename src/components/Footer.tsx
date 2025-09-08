@@ -1,3 +1,4 @@
+import { CONTACT_INFO } from "@/lib/constans";
 import { Github, Linkedin, Mail, Heart } from "lucide-react";
 
 const Footer = () => {
@@ -14,8 +15,8 @@ const Footer = () => {
               <span className="text-lg font-medium">Elliot Chavez</span>
             </div>
             <p className="text-muted-foreground">
-              Passionate web developer building beautiful, performant applications 
-              with a focus on aesthetics and user experience.
+              Passionate web developer building beautiful, performant
+              applications with a focus on aesthetics and user experience.
             </p>
           </div>
 
@@ -23,16 +24,28 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">Quick Links</h3>
             <nav className="flex flex-col space-y-2">
-              <a href="#about" className="text-muted-foreground hover:text-primary transition-colors duration-200">
+              <a
+                href="#about"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200"
+              >
                 About
               </a>
-              <a href="#skills" className="text-muted-foreground hover:text-primary transition-colors duration-200">
+              <a
+                href="#skills"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200"
+              >
                 Skills
               </a>
-              <a href="#experience" className="text-muted-foreground hover:text-primary transition-colors duration-200">
+              <a
+                href="#experience"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200"
+              >
                 Experience
               </a>
-              <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors duration-200">
+              <a
+                href="#contact"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200"
+              >
                 Contact
               </a>
             </nav>
@@ -42,19 +55,19 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">Connect</h3>
             <div className="space-y-2">
-              <a 
-                href="mailto:chavez.elliot@gmail.com"
+              <a
+                href={`mailto:${CONTACT_INFO.email}`}
                 className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors duration-200"
               >
                 <Mail className="w-4 h-4" />
-                <span>chavez.elliot@gmail.com</span>
+                <span>{CONTACT_INFO.email}</span>
               </a>
-              <p className="text-muted-foreground">Kitchener, ON, Canada</p>
+              <p className="text-muted-foreground">{CONTACT_INFO.location}</p>
             </div>
-            
+
             <div className="flex space-x-4 pt-2">
               <a
-                href="https://www.github.com/elliot619"
+                href={CONTACT_INFO.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -63,7 +76,7 @@ const Footer = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://www.linkedin.com/in/elliotch"
+                href={CONTACT_INFO.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -80,7 +93,7 @@ const Footer = () => {
           <p className="text-muted-foreground text-sm">
             © {currentYear} Elliot C. Chavez Morales. All rights reserved.
           </p>
-          
+
           <div className="flex items-center space-x-1 text-muted-foreground text-sm mt-4 sm:mt-0">
             <span>Built with</span>
             <Heart className="w-4 h-4 text-red-500" />

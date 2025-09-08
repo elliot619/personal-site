@@ -13,9 +13,9 @@ const Skills = () => {
         { name: "React.js", level: "Advanced" },
         { name: "Next.js", level: "Advanced" },
         { name: "TypeScript", level: "Advanced" },
-        { name: "CSS3 / SASS", level: "Advanced" },
-        { name: "Tailwind CSS", level: "Advanced" }
-      ]
+        { name: "CSS3", level: "Advanced" },
+        { name: "Tailwind CSS", level: "Advanced" },
+      ],
     },
     {
       title: "Backend",
@@ -23,23 +23,28 @@ const Skills = () => {
       color: "text-accent",
       skills: [
         { name: "Node.js", level: "Proficient" },
-        { name: "PostgreSQL", level: "Proficient" },
         { name: "REST APIs", level: "Advanced" },
-        { name: "Git", level: "Proficient" },
-        { name: "CMS", level: "Proficient" }
-      ]
+        { name: "Next.JS", level: "Advanced" },
+        {
+          name: "Serverless and Cloud (AWS, Vercel, GCP)",
+          level: "Proficient",
+        },
+        {
+          name: "Headless CMS (Contentful, Sanity, ContentStack)",
+          level: "Advanced",
+        },
+      ],
     },
     {
       title: "Tools & Platforms",
       icon: Wrench,
       color: "text-primary",
       skills: [
-        { name: "Git / GitHub", level: "Advanced" },
-        { name: "VS Code", level: "Advanced" },
-        { name: "Webpack", level: "Proficient" },
-        { name: "Docker", level: "Intermediate" },
-        { name: "AWS", level: "Intermediate" }
-      ]
+        { name: "Git (Github, BitBucket, Azure DevOps)", level: "Advanced" },
+        { name: "GenAI (Claude, OpenAI)", level: "Proficient" },
+        { name: "Slack", level: "Advanced" },
+        { name: "Search and Indexing (Algolia)", level: "Proficient" },
+      ],
     },
     {
       title: "Specialties",
@@ -47,12 +52,14 @@ const Skills = () => {
       color: "text-accent",
       skills: [
         { name: "Performance Optimization", level: "Advanced" },
+        { name: "Mobile-first approach", level: "Advanced" },
         { name: "Responsive Design", level: "Advanced" },
         { name: "SEO Optimization", level: "Advanced" },
-        { name: "Component Libraries", level: "Advanced" },
-        { name: "Testing", level: "Proficient" }
-      ]
-    }
+        { name: "Atomic Design", level: "Advanced" },
+        { name: "Agile Development", level: "Advanced" },
+        { name: "Unit and Integration Testing", level: "Advanced" },
+      ],
+    },
   ];
 
   const getLevelColor = (level: string) => {
@@ -76,29 +83,35 @@ const Skills = () => {
             Technical <span className="gradient-text">Skills</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive toolkit for building modern, scalable web applications
+            A comprehensive toolkit for building modern, scalable web
+            applications
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((category, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className="group bg-card/50 backdrop-blur-sm border-border/50 hover:shadow-card transition-all duration-300 hover:scale-105"
             >
               <CardHeader className="text-center pb-4">
-                <div className={`w-12 h-12 mx-auto rounded-lg bg-background/50 flex items-center justify-center mb-3 group-hover:bg-background/80 transition-colors duration-300`}>
+                <div
+                  className={`w-12 h-12 mx-auto rounded-lg bg-background/50 flex items-center justify-center mb-3 group-hover:bg-background/80 transition-colors duration-300`}
+                >
                   <category.icon className={`w-6 h-6 ${category.color}`} />
                 </div>
                 <CardTitle className="text-lg">{category.title}</CardTitle>
               </CardHeader>
-              
+
               <CardContent className="space-y-3">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="flex items-center justify-between">
+                  <div
+                    key={skillIndex}
+                    className="flex items-center justify-between"
+                  >
                     <span className="text-sm font-medium">{skill.name}</span>
-                    <Badge 
-                      variant="outline" 
+                    <Badge
+                      variant="outline"
                       className={`text-xs ${getLevelColor(skill.level)}`}
                     >
                       {skill.level}
@@ -115,10 +128,18 @@ const Skills = () => {
           <h3 className="text-xl font-semibold mb-6">Languages & Frameworks</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              "JavaScript", "TypeScript", "React", "Next.js", "Node.js", 
-              "PostgreSQL", "CSS3", "SASS", "HTML5", "Git", "REST APIs"
+              "JavaScript",
+              "TypeScript",
+              "React",
+              "Next.js",
+              "Node.js",
+              "CSS3",
+              "HTML5",
+              "Git",
+              "REST APIs",
+              "Agile",
             ].map((tech, index) => (
-              <Badge 
+              <Badge
                 key={index}
                 variant="secondary"
                 className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors duration-200 text-sm py-1 px-3"

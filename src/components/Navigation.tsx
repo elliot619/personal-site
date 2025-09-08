@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Github, Linkedin, Mail } from "lucide-react";
+import { CONTACT_INFO } from "@/lib/constans";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,9 +23,13 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? "bg-background/80 backdrop-blur-md border-b border-border" : ""
-    }`}>
+    <nav
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-background/80 backdrop-blur-md border-b border-border"
+          : ""
+      }`}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
@@ -49,7 +54,7 @@ const Navigation = () => {
           {/* Social Links */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="https://www.github.com/elliot619"
+              href={CONTACT_INFO.github}
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -57,7 +62,7 @@ const Navigation = () => {
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="https://www.linkedin.com/in/elliotch"
+              href={CONTACT_INFO.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -65,7 +70,7 @@ const Navigation = () => {
               <Linkedin className="w-5 h-5" />
             </a>
             <a
-              href="mailto:chavez.elliot@gmail.com"
+              href={`mailto:${CONTACT_INFO.email}`}
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
             >
               <Mail className="w-5 h-5" />
@@ -79,7 +84,11 @@ const Navigation = () => {
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {isMenuOpen ? (
+              <X className="w-5 h-5" />
+            ) : (
+              <Menu className="w-5 h-5" />
+            )}
           </Button>
         </div>
 
@@ -99,7 +108,7 @@ const Navigation = () => {
               ))}
               <div className="flex space-x-4 px-3 py-2">
                 <a
-                  href="https://www.github.com/elliot619"
+                  href={CONTACT_INFO.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -107,7 +116,7 @@ const Navigation = () => {
                   <Github className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/elliotch"
+                  href={CONTACT_INFO.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -115,7 +124,7 @@ const Navigation = () => {
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="mailto:chavez.elliot@gmail.com"
+                  href={`mailto:${CONTACT_INFO.email}`}
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
                 >
                   <Mail className="w-5 h-5" />
