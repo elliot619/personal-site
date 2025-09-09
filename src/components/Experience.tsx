@@ -22,7 +22,7 @@ const Experience = () => {
       location: "Remote / Mexico & Canada",
       period: "08/2021 - Current",
       description:
-        "Full stack web development of existing and new web applications. Technical lead for a couple of KraftHeinz projects and mentor for fellow team members. Technical presentations, infrastructure definition and implementation, code reviews, internationalization of existing applications, definition of testing plans along QA, and collaboration with UX/design and other teams to deliver high-quality solutions.",
+        "Led full-stack web development for existing and new applications. Served as technical lead for multiple KraftHeinz projects and mentored team members. Delivered technical presentations, defined infrastructure implementations, conducted code reviews, internationalized applications, established testing plans with QA, and collaborated with UX/design teams to deliver high-quality solutions.",
       technologies: [
         "React.js",
         "JavaScript",
@@ -37,9 +37,9 @@ const Experience = () => {
       position: "Front-end Engineer",
       clients: "Expedia Group",
       location: "Remote / Mexico",
-      period: "07/2020-08/2021",
+      period: "07/2020 - 08/2021",
       description:
-        "Support and develop of new features for an existing and problematic Node.js web application. Then, worked on defining a stabilization plan and its implementation that consisted on migrating the existing code from node 8 to the latest and to update the custom framework that the app was built on from version 7 to 10.",
+        "Supported and developed new features for an existing and problematic Node.js web application. Worked on defining a stabilization plan and its implementation, which consisted of migrating the existing code from Node 8 to the latest version and updating the custom framework from version 7 to 10.",
       technologies: [
         "Node.js",
         "JavaScript",
@@ -54,7 +54,7 @@ const Experience = () => {
       location: "Remote / Mexico",
       period: "10/2020 - 12/2020",
       description:
-        "Worked with the UX team to create, develop, and deliver changes for a web application that allows clients to create custom campaigns through the usage of SMS, MMS and RCS. Had the chance to define and implement the infrastructure that the app is using along the definition and use of good practices around agile methodology.",
+        "Collaborated with the UX team to create, develop, and deliver changes for a web application that allows clients to create custom campaigns using SMS, MMS, and RCS. Defined and implemented the application infrastructure, along with establishing best practices for agile methodology.",
       technologies: [
         "React.js",
         "JavaScript",
@@ -72,7 +72,7 @@ const Experience = () => {
       location: "Mexico",
       period: "05/2015 - 10/2019",
       description:
-        "Development of native android and web applications. Front and back end development to generate web services for internal and third-party use for the online gaming and betting sector.",
+        "Developed native Android and web applications. Built front-end and back-end solutions to generate web services for internal and third-party use in the online gaming and betting sector.",
       technologies: [
         "Android",
         "PHP",
@@ -188,7 +188,7 @@ const Experience = () => {
                     Computational Engineering
                   </p>
                   <p className="text-muted-foreground">
-                    Universidad Autonoma de Baja California
+                    Universidad Autónoma de Baja California
                   </p>
                   <p className="text-sm text-muted-foreground">
                     Specialized in computer engineering with focus on software
