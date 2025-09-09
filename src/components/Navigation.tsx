@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Github, Linkedin, Mail } from "lucide-react";
-import { CONTACT_INFO } from "@/lib/constans";
+import { CONTACT_INFO } from "@/lib/constants";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

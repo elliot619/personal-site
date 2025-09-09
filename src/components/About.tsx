@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Heart, Coffee, Monitor } from "lucide-react";
 import codeEditorImage from "@/assets/code-editor.jpg";
-import { CONTACT_INFO, ABOUT } from "@/lib/constans";
+import { CONTACT_INFO, ABOUT } from "@/lib/constants";
 
 const About = () => {
   const interests = [
@@ -33,17 +33,16 @@ const About = () => {
                   {ABOUT.yearsOfExperience}
                   &nbsp; years of experience building beautiful, performant
                   applications. I specialize in modern JavaScript frameworks and
-                  have a strong attraction for aesthetics, performance, and UX.
+                  have a strong passion for aesthetics, performance, and UX.
                 </p>
 
                 <p>
                   My journey spans from front-end development with React and
-                  Next.js to full-stack solutions with Node.js. I'm also no
-                  stranger to native mobile development as I have a few years of
-                  experience developing for Android platforms. I enjoy
-                  participating in all (yes, ALL of them) aspects of software
-                  development: from initial concept to deployment and
-                  maintenance.
+                  Next.js to full-stack solutions with Node.js. I'm also
+                  experienced in native mobile development, having spent several
+                  years developing for Android platforms. I enjoy participating
+                  in all aspects of software development: from initial concept
+                  to deployment and maintenance.
                 </p>
 
                 <p>
@@ -65,19 +64,19 @@ const About = () => {
                   <div className="flex items-center space-x-3">
                     <Monitor className="w-5 h-5 text-accent" />
                     <span className="text-sm">
-                      Goal and challenges oriented.
+                      Goal and challenge-oriented.
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Coffee className="w-5 h-5 text-primary" />
                     <span className="text-sm">
-                      Experience in multiple industries.
+                      Experience across multiple industries.
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Heart className="w-5 h-5 text-accent" />
                     <span className="text-sm">
-                      Loves Clean Code & Best Practices
+                      Passionate about Clean Code & Best Practices
                     </span>
                   </div>
                 </div>

@@ -1,4 +1,4 @@
-import { CONTACT_INFO } from "@/lib/constans";
+import { CONTACT_INFO } from "@/lib/constants";
 import { Github, Linkedin, Mail, Heart } from "lucide-react";
 
 const Footer = () => {

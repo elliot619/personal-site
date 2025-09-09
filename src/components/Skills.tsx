@@ -40,7 +40,7 @@ const Skills = () => {
       icon: Wrench,
       color: "text-primary",
       skills: [
-        { name: "Git (Github, BitBucket, Azure DevOps)", level: "Advanced" },
+        { name: "Git (GitHub, BitBucket, Azure DevOps)", level: "Advanced" },
         { name: "GenAI (Claude, OpenAI)", level: "Proficient" },
         { name: "Slack", level: "Advanced" },
         { name: "Search and Indexing (Algolia)", level: "Proficient" },
@@ -52,7 +52,7 @@ const Skills = () => {
       color: "text-accent",
       skills: [
         { name: "Performance Optimization", level: "Advanced" },
-        { name: "Mobile-first approach", level: "Advanced" },
+        { name: "Mobile-first Development", level: "Advanced" },
         { name: "Responsive Design", level: "Advanced" },
         { name: "SEO Optimization", level: "Advanced" },
         { name: "Atomic Design", level: "Advanced" },

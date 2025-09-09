@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CONTACT_INFO } from "@/lib/constans";
+import { CONTACT_INFO } from "@/lib/constants";
 import { Github, Linkedin, Mail, MapPin, MessageCircle } from "lucide-react";
 
 const Contact = () => {

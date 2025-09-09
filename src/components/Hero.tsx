@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Code, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-developer.jpg";
-import { ABOUT } from "@/lib/constans";
+import { ABOUT } from "@/lib/constants";
 
 const Hero = () => {
   return (
@@ -35,9 +35,9 @@ const Hero = () => {
               </h1>
 
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Passionate web developer who loves to build beautiful,
-                performant, and functional apps. Strong attraction for
-                aesthetics, performance, and UX.
+                Passionate web developer specializing in building beautiful,
+                performant, and functional applications. Focused on delivering
+                exceptional aesthetics, performance, and user experience.
               </p>
             </div>
 

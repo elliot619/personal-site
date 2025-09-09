@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CalendarDays, MapPin, ExternalLink } from "lucide-react";
-import { ABOUT } from "@/lib/constans";
+import { ABOUT } from "@/lib/constants";
 
 interface IExperienceEntry {
   company: string;
