@@ -3,80 +3,102 @@ import { Badge } from "@/components/ui/badge";
 import { CalendarDays, MapPin, ExternalLink } from "lucide-react";
 import { ABOUT } from "@/lib/constans";
 
+interface IExperienceEntry {
+  company: string;
+  position: string;
+  clients?: string;
+  location: string;
+  period: string;
+  description: string;
+  technologies: string[];
+}
+
 const Experience = () => {
-  const experiences = [
+  const experiences: IExperienceEntry[] = [
     {
       company: "Svitla & Apply Digital",
       position: "Senior Software Engineer",
-      location: "Freedom Mobile, KraftHeinz & Schumacher Homes",
+      clients: "Freedom Mobile, KraftHeinz, Schumacher Homes & Mirion",
+      location: "Remote / Mexico & Canada",
       period: "08/2021 - Current",
       description:
-        "Front end and back end development of existing and new web apps and solutions. Technical lead and mentor for fellow team members. The creation of a components library and its usage across multiple apps. Technical presentations, and acted as a backup tech lead for a Kit project to them formalize as the main developer.",
+        "Full stack web development of existing and new web applications. Technical lead for a couple of KraftHeinz projects and mentor for fellow team members. Technical presentations, infrastructure definition and implementation, code reviews, internationalization of existing applications, definition of testing plans along QA, and collaboration with UX/design and other teams to deliver high-quality solutions.",
       technologies: [
         "React.js",
         "JavaScript",
-        "Node.js",
-        "Components Library",
+        "TypeScript",
+        "Next.js",
+        "Headless CMS",
         "Technical Leadership",
       ],
     },
     {
       company: "Luxoft",
       position: "Front-end Engineer",
-      location: "Expedia",
+      clients: "Expedia Group",
+      location: "Remote / Mexico",
       period: "07/2020-08/2021",
       description:
-        "Support for an existing mutable Node.js for better app by making hot fixes. Then, worked on defining a stabilization plan and its implementation. Migrated the existing code from node 8 to 12 and also the custom framework that the app was built on from version 7 to 10. Finally, did the migration to standard dependency resolvers along its implementation on the UI side.",
+        "Support and develop of new features for an existing and problematic Node.js web application. Then, worked on defining a stabilization plan and its implementation that consisted on migrating the existing code from node 8 to the latest and to update the custom framework that the app was built on from version 7 to 10.",
       technologies: [
         "Node.js",
         "JavaScript",
-        "Migration",
-        "Framework Updates",
-        "UI Development",
+        "TypeScript",
+        "React.js",
+        "Agile",
       ],
     },
     {
-      company: "Open Force",
-      position: "Front-end Developer",
-      location: "DHL",
+      company: "Open Market",
+      position: "Front-end Engineer",
+      location: "Remote / Mexico",
       period: "10/2020 - 12/2020",
       description:
-        "Worked with the UX team to deliver changes for an in-development application for last time SMS, MMS and RCS custom flows. Had the chance to implement good practices around agile and decisional about the tech stack we used.",
+        "Worked with the UX team to create, develop, and deliver changes for a web application that allows clients to create custom campaigns through the usage of SMS, MMS and RCS. Had the chance to define and implement the infrastructure that the app is using along the definition and use of good practices around agile methodology.",
       technologies: [
+        "React.js",
+        "JavaScript",
+        "Angular.js",
         "UX Collaboration",
         "SMS/MMS/RCS",
         "Agile",
-        "Custom Flows",
+        "Custom",
       ],
     },
     {
-      company: "Clientrix MX",
-      position: "Full Stack Developer",
-      location: "Multiple Global Brands",
+      company: "Caliente MX",
+      position: "Full Stack Engineer",
+      clients: "Multiple E-Gaming Global Brands (Winner, Caliente, etc.)",
+      location: "Mexico",
       period: "05/2015 - 10/2019",
       description:
-        "Development of native android apps and web Blazor. Front and back end development to generate web services for internal and third-party use for the online gaming and betting sector.",
+        "Development of native android and web applications. Front and back end development to generate web services for internal and third-party use for the online gaming and betting sector.",
       technologies: [
         "Android",
-        "Blazor",
+        "PHP",
+        "JavaScript",
+        "jQuery",
+        "MySQL",
         "Web Services",
         "Gaming",
         "Full Stack",
       ],
     },
     {
-      company: "Various Companies",
-      position: "Software Engineer & Developer",
-      location: "Mexico & International",
+      company: "Other Companies",
+      position: "Software Engineer",
+      location: "Mexico",
       period: "10/2014 - 05/2015",
+      clients: "Kavlico Airspace, GNP Seguros, Evenflo, NBC Universal, etc.",
       description:
-        "Early career roles including AMS developer at Softtek Universal, full stack development at Grupo LAN, manual testing at ArkusNexus, and engineering internship at CST Kavlico. Gained foundational experience across multiple technologies and industries.",
+        "Early career roles including AMS developer at Softtek Universal, full stack development at Grupo LAN, tester at ArkusNexus, and engineering internship at CST Kavlico. Gained foundational experience across multiple technologies and industries.",
       technologies: [
         ".NET",
+        "C#",
         "Web Applications",
         "Testing",
-        "Engineering",
-        "Multi-industry",
+        "AutoCAD",
+        "SQL Server",
       ],
     },
   ];
